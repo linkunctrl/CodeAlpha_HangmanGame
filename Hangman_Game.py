@@ -31,14 +31,16 @@ while tries > 0:
         print("Enter only one letter.")
         continue
 
-    guesses += guess
+    guesses += guess # concatinates guesses by attaching guess (letter) to it
     # if guess is not in the word then reduce number of tries
     if guess not in chosen_word:
         tries -= 1
         print("You guessed it wrong.")
-        print("You have ", tries, " left.")
+        print("You have ", tries, " tries left.")
     print("")
 
 # Game Over
 if tries == 0:
     print("You lost... The word was:", chosen_word)
+
+
